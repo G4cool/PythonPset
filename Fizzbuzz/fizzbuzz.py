@@ -20,5 +20,4 @@ for j in range (1, 101):
 	else:
 		print(j)
 
-for k in range (1, 101):
-	print('' if age < 13 else 'teenager' if () else k)
+for k in range (1, 101): print("fizzbuzz" if (((k % 3) == 0) & ((k % 5) == 0)) else ("fizz" if ((k % 3) == 0) else "buzz") if (((k % 3) == 0) | ((k % 5) == 0)) else k)
