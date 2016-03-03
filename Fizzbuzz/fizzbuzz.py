@@ -1,4 +1,4 @@
-for i in range (1, 100):
+for i in range (1, 101):
 	if (((i % 3) == 0) & ((i % 5) == 0)):
 		print("fizzbuzz")
 	elif (i % 3) == 0:
@@ -6,4 +6,19 @@ for i in range (1, 100):
 	elif (i % 5) == 0:
 		print("buzz")
 	else:
-		print(i)	
+		print(i)
+
+for j in range (1, 101):
+	if (((j % 3) == 0) | ((j % 5) == 0)):
+		if (((j % 3) == 0) & ((j % 5) == 0)):
+			print("fizzbuzz")
+		else:
+			if ((j % 3) == 0):
+				print("fizz")
+			else:
+				print("buzz")
+	else:
+		print(j)
+
+for k in range (1, 101):
+	print('' if age < 13 else 'teenager' if () else k)
