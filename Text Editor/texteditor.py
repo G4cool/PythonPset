@@ -23,7 +23,3 @@ frame.bind("<Button-1>", callback)
 frame.pack()
 
 root.mainloop()
-
-if not self.e.get().isdigit():
-     #get the length of the string in the widget, and subtract one, and delete everything up to the end
-     self.e.delete(len(self.e.get)-1, tk.END)
