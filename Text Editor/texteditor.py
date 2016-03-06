@@ -13,7 +13,7 @@ def callback(event):
 
 frame = Frame(root, width=100, height=100)
 var = StringVar()
-label = Label(root, textvariable=var)
+label = Label(root, justify=LEFT, padx=0, pady=0, textvariable=var)
 label.pack
 frame.bind("<Key>", key)
 frame.bind("<Button-1>", callback)
