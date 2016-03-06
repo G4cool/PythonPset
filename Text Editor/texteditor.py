@@ -4,6 +4,7 @@ root = Tk()
 
 def key(event):
     print "pressed", repr(event.char)
+    print "label height: " + str(label.winfo_height())
     if (event.char == "\x7f"):
     	var.set(var.get()[:-1])
     else:
@@ -26,10 +27,10 @@ def file_save():
     f.close() # `()` was missing.
 
 menubar=Menu(root)
-frame = Frame(root, width=1000, height=500)
 var = StringVar()
 label = Label(root, anchor=NW, justify=LEFT, padx=0, pady=0, textvariable=var)
 label.pack(fill="x")
+frame = Frame(root, width=1000, height=500-(label.winfo_height()))
 frame.bind("<Key>", key)
 frame.bind("<Button-1>", callback)
 frame.pack()
