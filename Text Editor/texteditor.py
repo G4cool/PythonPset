@@ -4,8 +4,6 @@ root = Tk()
 
 def key(event):
     print "pressed", repr(event.char)
-    # a = Label(root, wraplength=100000, text=event.char)
-    # a.pack()
     var.set(var.get() + event.char)
     label.pack()
 
