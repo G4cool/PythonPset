@@ -6,9 +6,7 @@ def key(event):
     print "pressed", repr(event.char)
     # a = Label(root, wraplength=100000, text=event.char)
     # a.pack()
-    var = StringVar()
-    label = Label(root, wraplength=10000, textvariable=var)
-    var.set(event.char)
+    var.set(var.get() + event.char)
     label.pack()
 
 def callback(event):
@@ -16,6 +14,9 @@ def callback(event):
     print "clicked at", event.x, event.y
 
 frame = Frame(root, width=100, height=100)
+var = StringVar()
+label = Label(root, textvariable=var)
+label.pack
 frame.bind("<Key>", key)
 frame.bind("<Button-1>", callback)
 frame.pack()
